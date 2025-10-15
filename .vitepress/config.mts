@@ -2,6 +2,7 @@ import {defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/orange-site/docs/',
   title: "Orange",
   description: "Orange Site",
   themeConfig: {
