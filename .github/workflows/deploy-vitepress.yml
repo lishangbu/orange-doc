@@ -39,5 +39,6 @@ jobs:
         with:
           github_token: ${{ secrets.PAT }}
           publish_dir: .vitepress/dist
+          external_repository: lishangbu/orange-site
           publish_branch: main
           destination_dir: docs
