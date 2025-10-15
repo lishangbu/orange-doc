@@ -1,0 +1,43 @@
+name: 部署 VitePress
+
+on:
+  push:
+    branches:
+      - main # 这段是在推送到 docs 分支时触发该命令
+  workflow_dispatch:
+
+jobs:
+  deploy-vitepress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 使用 Node.js 24.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+
+      - name: 缓存 npm 包
+        uses: actions/cache@v4
+        if: github.actor != 'dependabot[bot]'
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: 安装依赖
+        run: npm i
+
+      - name: 构建 VitePress
+        run: npm run docs:build
+
+      - name: 部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PAT }}
+          publish_dir: .vitepress/dist
+          publish_branch: main
+          destination_dir: docs
