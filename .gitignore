@@ -1,0 +1,13 @@
+# Logs
+logs
+*.log*
+
+# Editor directories and files
+.vscode
+.idea
+
+node_modules
+.vitepress/dist
+.vitepress/cache
+
+.DS_Store
