@@ -7,7 +7,7 @@ hero:
   text: "一个基于Spring Boot 4.x快速开发脚手架"
   tagline: 标准化、多适配、更前沿、更轻量、更灵活、以及更高的性能
   image:
-    src: ./assets/images/logo.svg
+    src: /public/images/logo.svg
     alt: Orange Framework
   actions:
     - theme: brand
