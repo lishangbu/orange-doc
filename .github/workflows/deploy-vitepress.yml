@@ -42,3 +42,5 @@ jobs:
           external_repository: lishangbu/orange-site
           publish_branch: main
           destination_dir: docs
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
