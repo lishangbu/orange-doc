@@ -6,6 +6,9 @@ export default defineConfig({
   title: "Orange",
   description: "Orange Site",
   themeConfig: {
+    search: {
+      provider: 'local'
+    },
     // https://vitepress.dev/reference/default-theme-config
     footer: {
       message: 'Released under the MIT License.',
