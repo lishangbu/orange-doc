@@ -37,7 +37,7 @@ jobs:
       - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PAT }}
+          personal_token: ${{ secrets.PAT }}
           publish_dir: .vitepress/dist
           external_repository: lishangbu/orange-site
           publish_branch: main
