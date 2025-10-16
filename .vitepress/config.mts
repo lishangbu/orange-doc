@@ -29,7 +29,9 @@ export default defineConfig({
       {
         text: '后端指南',
         items: [
+          {text: '环境搭建', link: '/zh-cn/backend/intro/environment-setup'},
           {text: '快速开始', link: '/zh-cn/backend/intro/getting-started'},
+          {text: '开发规约', link: '/zh-cn/backend/intro/development-guidelines'},
         ]
       },
       {
