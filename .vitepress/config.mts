@@ -38,6 +38,7 @@ export default defineConfig({
         text: '前端指南',
         items: [
           {text: '快速开始', link: '/zh-cn/frontend/intro/getting-started'},
+          {text: 'BasicForm 组件使用', link: '/zh-cn/frontend/features/components/basic-form'},
         ]
       }
     ],
